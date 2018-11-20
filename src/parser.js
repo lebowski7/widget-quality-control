@@ -3,14 +3,13 @@ export default (fileContents) => {
   let fileContentLine = fileContents.match(/[^\r\n]+/g);
   fileContentLine.forEach(function (line) {
     if(line.includes('reference')) {
-      const reference = line.split(" ");
-      result.reference = {};
+      const reference = line.split(' ');
       result.reference = {
         temperature: reference[1],
         humidity: reference[2]
       };
     } else if(line.includes('thermometer') || line.includes('humidity')) {
-      const widget = line.split(" ");
+      const widget = line.split(' ');
       if(!result.hasOwnProperty('widgets')) {
         result.widgets = [];
       }
@@ -21,7 +20,7 @@ export default (fileContents) => {
       };
       result.widgets.push(widgetResult);
     } else {
-      const value = line.split(" ");
+      const value = line.split(' ');
 
       if(result.hasOwnProperty('widgets')) {
         const index = result.widgets.length - 1;
