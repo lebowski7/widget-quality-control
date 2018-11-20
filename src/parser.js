@@ -1,3 +1,5 @@
+import { WIDGET_TYPES } from './constants';
+
 export default (fileContents) => {
   let result = {};
   let fileContentLine = fileContents.match(/[^\r\n]+/g);
@@ -8,7 +10,7 @@ export default (fileContents) => {
         temperature: reference[1],
         humidity: reference[2]
       };
-    } else if(line.includes('thermometer') || line.includes('humidity')) {
+    } else if(line.includes(WIDGET_TYPES.THERMOMETER) || line.includes(WIDGET_TYPES.HUMIDITY)) {
       const widget = line.split(' ');
       if(!result.hasOwnProperty('widgets')) {
         result.widgets = [];

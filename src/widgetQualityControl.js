@@ -1,21 +1,6 @@
-import { standardDeviation, average } from "./helpers.js";
-import parseLogData from './parser.js';
-
-const WIDGET_TYPES = {
-  THERMOMETER: 'thermometer',
-  HUMIDITY: 'humidity'
-};
-
-const THERMOMETER_OPTIONS = {
-  ULTRA_PRECISE: 'ultra precise',
-  VERY_PRECISE: 'very precise',
-  PRECISE: 'precise'
-};
-
-const HUMIDITY_SENSOR_OPTIONS = {
-  DISCARD: 'discard',
-  KEEP: 'very keep'
-};
+import { standardDeviation, average } from './helpers';
+import parseLogData from './parser';
+import { HUMIDITY_SENSOR_OPTIONS, THERMOMETER_OPTIONS, WIDGET_TYPES } from './constants';
 
 export default class WidgetQualityControl {
   constructor(fileContents) {
