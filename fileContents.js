@@ -1,4 +1,4 @@
-module.exports = `reference 70.0 45.0
+export default `reference 70.0 45.0
 thermometer temp-1
 2007-04-05T22:00 72.4
 2007-04-05T22:01 76.0
