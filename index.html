@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Widget quality control</title>
+        <script src="src/index.js"></script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <header class="headerWrapper">
+            <h1>Widget quality control</h1>
+            <div class="subtitle">HW interview</div>
+        </header>
+
+        <section class="content">
+            <div>
+                <h2>Input log file</h2>
+                <pre id="input"></pre>
+            </div>
+            <div>
+                <h2>Output widget quality</h2>
+                <pre id="output"></pre>
+            </div>
+        </section>
+
+        <section class="requirements">
+            <h2>Requirements</h2>
+            <p>Widgets makes inexpensive thermometers and humidity sensors. In order to spot check the manufacturing process, some units are put in a test environment (for an unspecified amount of time) and their readings are logged. The test environment has a static, known temperature and relative humidity, but the sensors are expected to fluctuate a bit.</p>
+            <p>As a developer, your task is to process the logs and automate the quality control evaluation. The evaluation criteria are as follows:</p>
+            <ol>
+                <li>For a thermometer, it is branded “ultra precise” if the mean of the readings is within 0.5 degrees of the known temperature, and the standard deviation is less than 3. It is branded “very precise” if the mean is within 0.5 degrees of the room, and the standard deviation is under 5. Otherwise, it’s sold as “precise”.</li>
+                <li>For a humidity sensor, it must be discarded unless it is within 1% of the reference value for all readings.</li>
+            </ol>
+            <p>An example log looks like the <strong>Input log file</strong>. The first line means that the room was held at a constant 70 degrees, 45% relative humidity. Subsequent lines either identify a sensor (&lt;type&gt; &lt;name&gt;) or give a reading (&lt;time&gt; &lt;value&gt;).</p>
+
+            <pre>
+    Sample Output
+    {
+        "temp-1": "precise",
+        "temp-2": "ultra precise,
+        "hum-1": "keep",
+        "hum-2": "discard
+    }
+            </pre>
+            <strong>Create a JavaScript module that exports the following function: evaluateLogFile(fileContents) { } The contents of the log file will be passed as a string on the parameter fileContents to the function evaluateLogFile(). The function should return a JavaScript object like the sample output above. </strong> In the end, you will own this process, so you should solve the problem as described, but feel free to advocate for any changes or demonstrate any practices you think would make sense to improve the process (split into multiple files, change log format, etc). For example, one of the future plans that 37Widgets has is to make more IoT devices.
+        </section>
+    </body>
+</html>

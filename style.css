@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #fff;
+    background: #5C78D1;
+    background: -webkit-linear-gradient(to right, #5C78D1, #a261e0);
+    background: linear-gradient(to right, #5C78D1, #a261e0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 1rem;
+}
+
+.content pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+    height: 300px;
+}
+
+.content > div {
+   width: 49%;
+}
+
+.requirements {
+    padding: 0 2rem;
+}
