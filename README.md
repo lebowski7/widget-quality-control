@@ -7,7 +7,7 @@ HW interview
 Use the package manager npm to install Widget quality control app.
 
 ```bash
-npm install widget-quality-control
+git clone https://github.com/lebowski7/widget-quality-control.git
 ```
 
 ## Usage
