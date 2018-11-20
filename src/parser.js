@@ -3,6 +3,7 @@ import { WIDGET_TYPES } from './constants';
 export default (fileContents) => {
   let result = {};
   let fileContentLine = fileContents.match(/[^\r\n]+/g);
+
   fileContentLine.forEach(function (line) {
     if(line.includes('reference')) {
       const reference = line.split(' ');
